@@ -1,6 +1,6 @@
 @import 'normolize'
 @import 'elements'
-// @import 'header'
+@import 'slick'
 
 .main
     position: relative
@@ -43,21 +43,39 @@
             background-image: url('../img/pointer.svg')
             z-index: -11
 
+    @media screen and ( max-width: 1100px )
+        padding: 26px 26px 20px 0
+
+        h1
+            padding: 30px 28px 30px 32px
+            font-size: 24px
+            &::before
+                width: 130px
+                bottom: -31px
+
+        .col
+            padding: 40px 0
+
 .jorney
     padding: 125px 25px
-    justify-content: center
     background-image: url('../img/clouds.jpg')
     background-repeat: no-repeat
     background-size: cover
+    .fxw
+        max-width: 1300px
+        justify-content: center
 
-.boss 
-    padding: 100px 0 
+    img
+        max-width: 33.33%
+
+.boss
+    padding: 100px 0
     background-image: url('../img/matrics.jpg')
     background-repeat: repeat-x
-    background-position: center center 
-    // background-size: cover
+    background-position: center center
+    background-size: 100% auto
     text-align: center
-    img 
+    img
         width: 90%
         max-width: 1240px
 
@@ -84,7 +102,7 @@
         border-radius: 50px
         padding: 28px
         max-width: 1160px
-        margin: 0 auto 
+        margin: 0 auto
         &__heading
             font-size: 50px
             margin: 0 0 1px
@@ -111,7 +129,7 @@
         gap: 38px
         position: relative
         top: -70px
-        margin: 0 auto 
+        margin: 0 auto
 
     &-item
         width: 100%
@@ -121,7 +139,7 @@
         border-radius: 16px
         .btn
             width: 100%
-        
+
         img
             display: block
             margin: 0 auto 20px
@@ -135,7 +153,7 @@
             width: fit-content
 
             &__text
-                font-size: 20px 
+                font-size: 20px
                 color: #ccc
 
             &__icon
@@ -143,13 +161,13 @@
                 height: 31px
                 border-radius: 3px
                 background-color: #242424
-            li 
+            li
                 margin-bottom: 17px
                 justify-content: flex-start
                 gap: 14px
 
                 &.active
-                    .list__text 
+                    .list__text
                         color: #fff
                     .list__icon
                         background-color: #49EC46
@@ -159,6 +177,51 @@
             color: #FFE457
             text-align: center
             margin: 0 auto 30px
+
+    @media screen and ( max-width: 1100px )
+        padding-bottom: 30px
+        &::before
+            height: 68px
+
+        .container
+            max-width: 90%
+
+        &-box
+            &__heading
+                font-size: 30px
+
+            .fx
+                gap: 13px
+
+        &-code
+            font-size: 20px
+            margin-bottom: 10px
+
+        &__headline 
+            top: 26px
+
+        &-items 
+            gap: 22px
+            top: -40px
+
+        &-item 
+            width: 162px
+            padding: 20px 18px
+            img 
+                width: 80px
+                height: 80px
+
+            &__heading 
+                font-size: 26px
+
+            .list
+                &__icon
+                    min-width: 18px
+                    width: 18px
+                    height: 18px
+
+                li 
+                    gap: 8px
 
 .tokenomics
     background-image: url(../img/token.jpg)
@@ -244,3 +307,44 @@
         img
             max-width: 94px
             display: block
+
+    @media screen and ( max-width: 1100px )
+        .container
+            max-width: 90%
+
+        &-card 
+            img 
+                width: 99px
+                height: 99px
+                margin-bottom: 20px
+
+            &__text 
+                font-size: 25px
+                margin-bottom: 10px
+
+            &__descr 
+                font-size: 20px
+
+        .btn 
+            margin-bottom: 52px
+
+        &-slide 
+            width: 236px
+            padding-top: 83px
+            padding-bottom: 52px
+            margin: 74px 12px 0
+            img 
+                top: -73px
+                width: 136px
+                height: 136px
+
+            &__heading 
+                font-size: 40px
+                margin-bottom: 20px
+
+            &__desc
+                font-size: 25px
+
+        &-soc 
+            img
+                width: 74px
