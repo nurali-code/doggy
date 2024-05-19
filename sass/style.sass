@@ -143,6 +143,7 @@
                 right: 0
 
 .contract
+    overflow: hidden
     padding: 0
     background-image: url(../img/token.jpg)
     .container
@@ -338,6 +339,7 @@
                     line-height: 120%
 
 .boss
+    overflow: hidden
     text-align: center
     padding: 0
     @media screen and ( min-width: 700px )
@@ -370,7 +372,7 @@
     text-align: center
     padding: 60px 0
     .container
-        max-width: 1000px
+        max-width: 1100px
 
     &__heading
         margin-bottom: 90px
@@ -379,8 +381,9 @@
         margin: 0 0 85px
 
     &-card
-        width: 30%
+        width: 32%
         &__text
+            color: #ccc
             font-weight: bold
             font-size: 40px
             margin: 0 0 20px
@@ -491,6 +494,54 @@
             img
                 width: 74px
 
-@media screen and ( max-width: 700px )
-    .tokenomics
-        display: none
+    @media screen and ( max-width: 700px )
+        background-size: contain
+        &__heading 
+            font-size: 41px
+            margin-bottom: 40px
+
+        &-cards
+            display: block
+            margin-bottom: 40px
+
+        &-card
+            position: relative
+            padding: 31px 0 31px 160px
+            margin-bottom: 11px
+            width: 100%
+            img
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                min-width: 123px
+                height: 123px
+                width: 123px
+
+            &__descr 
+                font-size: 15px
+
+        &-slider 
+            margin-bottom: 25px
+        &-slide
+            width: 172px
+            margin: 62px 11px 0
+            padding: 61px 10px 38px
+            img
+                width: 100px
+                height: 100px
+                top: -50px
+
+            &__heading 
+                font-size: 28px
+
+            &__desc
+                font-size: 14px
+
+        &__subheading 
+            font-size: 26px
+
+        &-soc 
+            gap: 12px
+            img 
+                width: 50px
