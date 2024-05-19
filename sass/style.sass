@@ -56,6 +56,40 @@
         .col
             padding: 40px 0
 
+    @media screen and ( max-width: 700px )
+        padding: 60px 0 0
+        display: block
+        box-shadow: none
+        // overflow: visible
+        &-box
+            display: none
+
+        img
+            width: 100%
+            transform-origin: 50% 50%
+            margin-bottom: 60px
+
+        .col
+            width: 100%
+            padding: 0
+
+        h1
+            width: 100%
+            font-size: 24px
+            line-height: 130%
+            padding: 44px 47px
+            margin: 0
+            box-shadow: 0px 20px 35px 12px #fff
+
+            &::before
+                width: 72px
+                height: 66px
+                background-size: contain
+                background-image: url('../img/pointer-2.svg')
+                bottom: 99%
+                right: 2%
+                background-repeat: no-repeat
+
 .jorney
     padding: 125px 25px
     background-image: url('../img/clouds.jpg')
@@ -67,6 +101,47 @@
 
     img
         max-width: 33.33%
+
+    @media screen and ( max-width: 700px )
+        min-height: 240vw
+        padding: 100px 15px
+        .container 
+            width: 100%
+            padding: 0
+
+        .fxw
+            position: relative
+            z-index: 1
+            display: block
+
+        img
+            width: 70%
+            margin: 0 
+            max-width: 100%
+            position: absolute
+            &:first-of-type
+                position: relative
+
+            &:nth-child(2)
+                top: 25%
+                right: 0
+
+            &:nth-child(3)
+                top: 55%
+                left: 0
+                
+            &:nth-child(4)
+                top: 80%
+                right: 0
+
+            &:nth-child(5)
+                top: 110%
+                left: 0
+                       
+            &:nth-child(6)
+                top: 140%
+                right: 0
+                
 
 .boss
     padding: 100px 0
@@ -197,21 +272,21 @@
             font-size: 20px
             margin-bottom: 10px
 
-        &__headline 
+        &__headline
             top: 26px
 
-        &-items 
+        &-items
             gap: 22px
             top: -40px
 
-        &-item 
+        &-item
             width: 162px
             padding: 20px 18px
-            img 
+            img
                 width: 80px
                 height: 80px
 
-            &__heading 
+            &__heading
                 font-size: 26px
 
             .list
@@ -220,7 +295,7 @@
                     width: 18px
                     height: 18px
 
-                li 
+                li
                     gap: 8px
 
 .tokenomics
@@ -312,39 +387,45 @@
         .container
             max-width: 90%
 
-        &-card 
-            img 
+        &-card
+            img
                 width: 99px
                 height: 99px
                 margin-bottom: 20px
 
-            &__text 
+            &__text
                 font-size: 25px
                 margin-bottom: 10px
 
-            &__descr 
+            &__descr
                 font-size: 20px
 
-        .btn 
+        .btn
             margin-bottom: 52px
 
-        &-slide 
+        &-slide
             width: 236px
             padding-top: 83px
             padding-bottom: 52px
             margin: 74px 12px 0
-            img 
+            img
                 top: -73px
                 width: 136px
                 height: 136px
 
-            &__heading 
+            &__heading
                 font-size: 40px
                 margin-bottom: 20px
 
             &__desc
                 font-size: 25px
 
-        &-soc 
+        &-soc
             img
                 width: 74px
+
+@media screen and ( max-width: 700px )
+    .boss,
+    .contract,
+    .tokenomics
+        display: none
