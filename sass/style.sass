@@ -17,6 +17,9 @@
         z-index: -1
         position: relative
 
+    .col 
+        width: 100%
+
     &-box
         // border: 2px dashed #C9C5C5
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C9C5C5FF' stroke-width='2' stroke-dasharray='21%2c 20' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e")
@@ -26,13 +29,15 @@
 
     h1
         position: relative
+        width: 100%
         z-index: 1
+        min-height: 200px
         background-color: #fff
         color: #000
         padding: 50px 60px
         font-size: 37px
         margin: 0 0 60px
-        &::before
+        &::after
             content: ''
             display: block
             width: 144px
@@ -49,7 +54,7 @@
         h1
             padding: 30px 28px 30px 32px
             font-size: 24px
-            &::before
+            &::after
                 width: 130px
                 bottom: -31px
 
@@ -66,6 +71,8 @@
 
         img
             width: 100%
+            object-fit: cover
+            min-height: 90vw
             transform-origin: 50% 50%
             margin-bottom: 60px
 
@@ -81,7 +88,7 @@
             margin: 0
             box-shadow: 0px 20px 35px 12px #fff
 
-            &::before
+            &::after
                 width: 72px
                 height: 66px
                 background-size: contain
@@ -95,6 +102,7 @@
     background-image: url('../img/clouds.jpg')
     background-repeat: no-repeat
     background-size: cover
+    overflow: hidden
     .fxw
         max-width: 1300px
         justify-content: center
@@ -103,8 +111,8 @@
         max-width: 33.33%
 
     @media screen and ( max-width: 700px )
-        min-height: 240vw
-        padding: 100px 15px
+        min-height: 285vw
+        padding: 135px 15px
         .container
             width: 100%
             padding: 0
@@ -123,23 +131,23 @@
                 position: relative
 
             &:nth-child(2)
-                top: 25%
+                top: 45%
                 right: 0
 
             &:nth-child(3)
-                top: 55%
+                top: 65%
                 left: 0
 
             &:nth-child(4)
-                top: 80%
+                top: 100%
                 right: 0
 
             &:nth-child(5)
-                top: 110%
+                top: 140%
                 left: 0
 
             &:nth-child(6)
-                top: 140%
+                top: 180%
                 right: 0
 
 .contract
@@ -348,12 +356,20 @@
         background-repeat: repeat-x
         background-position: center center
         background-size: 100% auto
+        &-compare,
         &__heading
             display: none
+
+    &-compare
+        img 
+            max-width: unset !important
+
     img
         width: 90%
         display: block
+        margin: 0 auto 
         max-width: 1240px
+
 
     @media screen and ( max-width: 700px )
         img
@@ -363,7 +379,7 @@
         &__heading
             text-align: center
             background-color: #fff
-            padding: 10px 10px 40px
+            padding: 10px 10px 30px
             color: #000
             margin: 0
 

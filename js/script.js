@@ -9,3 +9,13 @@ $('.tokenomics-slider').slick({
     slidesToScroll: 1,
     variableWidth: true,
 });
+
+$('.boss-compare').beforeAfter({
+    movable: true,
+    clickMove: true,
+    position: 60,
+    separatorColor: '#eee',
+    bulletColor: '#eee',
+    arrowColor: '#000',
+});
+
