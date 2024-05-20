@@ -122,15 +122,17 @@
     </section>
 
     <section class="boss">
+        <img src="img/bottom.png" class="boss__top" alt="i">
         <picture>
             <source media="(min-width: 700px)" srcset="img/boss.png">
-            <img src="img/boss-mob.jpg" loading="lazy" alt="boss">
+            <img src="img/boss-mob.jpg" class="boss__main" loading="lazy" alt="boss">
         </picture>
         <h2 class="boss__heading">Which pill will you choose?</h2>
         <div class="boss-compare">
             <img src="img/before.jpg" alt="img">
             <img src="img/after.jpg" alt="img">
         </div>
+        <img src="img/top.png" class="boss__bottom" alt="i">
     </section>
 
     <section class="tokenomics">
@@ -199,7 +201,7 @@
     </section>
 
     <script src="js/index.umd.js"></script>
-    <script> new TypeIt("#simpleUsage", { speed: 20, waitUntilVisible: true, }).go();</script>
+    <script> new TypeIt("#simpleUsage", { speed: 20, waitUntilVisible: false, }).go();</script>
     <script src="js/aos.js"></script>
     <script>AOS.init({ duration: 1000, offset: 400, });</script>
     <script src="js/jquery-3.7.1.min.js"></script>
