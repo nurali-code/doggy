@@ -98,7 +98,7 @@
                 background-repeat: no-repeat
 
 .jorney
-    padding: 125px 25px
+    padding: 125px 0 0
     background-image: url('../img/clouds.jpg')
     background-repeat: no-repeat
     background-size: cover
@@ -107,12 +107,19 @@
         max-width: 1300px
         justify-content: center
 
-    img
-        max-width: 33.33%
+        img
+            max-width: 33.33%
+
+    &__bottom 
+        margin-top: 120px
+        width: 100%
+        display: block
 
     @media screen and ( max-width: 700px )
-        min-height: 285vw
+        min-height: 430vw
         padding: 135px 15px
+        position: relative
+        z-index: 1
         .container
             width: 100%
             padding: 0
@@ -122,51 +129,47 @@
             z-index: 1
             display: block
 
-        img
-            width: 70%
-            margin: 0
-            max-width: 100%
+            img
+                width: 70%
+                margin: 0
+                max-width: 100%
+                position: absolute
+                &:first-of-type
+                    position: relative
+
+                &:nth-child(2)
+                    top: 70%
+                    right: 0
+
+                &:nth-child(3)
+                    top: 140%
+                    left: 0
+
+                &:nth-child(4)
+                    top: 210%
+                    right: 0
+
+                &:nth-child(5)
+                    top: 280%
+                    left: 0
+
+                &:nth-child(6)
+                    top: 350%
+                    right: 0
+
+        &__bottom
             position: absolute
-            &:first-of-type
-                position: relative
+            bottom: 0
+            left: 0
+            width: 100% 
 
-            &:nth-child(2)
-                top: 45%
-                right: 0
-
-            &:nth-child(3)
-                top: 65%
-                left: 0
-
-            &:nth-child(4)
-                top: 100%
-                right: 0
-
-            &:nth-child(5)
-                top: 140%
-                left: 0
-
-            &:nth-child(6)
-                top: 180%
-                right: 0
 
 .contract
     overflow: hidden
-    padding: 0
+    padding: 30px 0 40px
     background-image: url(../img/token.jpg)
     .container
         max-width: 1240px
-
-    &::before
-        content: ''
-        display: block
-        width: 100%
-        height: 100px
-        background-image: url('../img/top.jpg')
-        background-repeat: no-repeat
-        background-position: bottom center
-        background-size: 100% auto
-        margin: 0 0 40px
 
     &-box
         background-color: #3F3F3F
@@ -252,9 +255,6 @@
 
     @media screen and ( max-width: 1100px )
         padding-bottom: 30px
-        &::before
-            height: 68px
-
         .container
             max-width: 90%
 
@@ -296,10 +296,8 @@
                     gap: 8px
 
     @media screen and ( max-width: 700px )
-        padding-top: 60px
+        padding-top: 30px
         background-size: contain
-        &::before
-            display: none
 
         .container
             max-width: 100%
